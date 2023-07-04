@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    
+}
+.birthday-input{
+    width: 30px;
+    outline: 0;
+    border: 0;
+    border-bottom: 2px solid;
+    text-align: center;
+}
+input[type="number"]::-webkit-inner-spin-button{
+    display: none;
+}
