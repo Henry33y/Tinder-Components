@@ -1,6 +1,15 @@
 *{
     box-sizing: border-box;
-    /* font-family: 'Montserrat', sans-serif; */
+    font-family: ChaletNewYorkNineteenSeventy;
+}
+@font-face {
+    font-family: ChaletNewYorkNineteenSeventy;
+    src: url(/TinderComponents/Fonts/ChaletNewYorkNineteenSeventy.ttf);
+}
+:root{
+    --electric-pink: #FD297B;
+    --pastel-red: #FF655B;
+    --fiery-rose: #FF5864;
 }
 body{
     overflow-x: hidden;
@@ -8,8 +17,25 @@ body{
 main{
     width: 400px;
 }
+main > div{
+    min-height: 100%;
+}
+.preference-page{
+    display: none;
+}
+.purpose-page{
+    display: none;
+
+}
+.imageUpload-page{
+    height: auto;
+    display: none;
+}
+main> div>p{
+    font-size: 0.825em;
+}
 .birthday-input{
-    width: 30px;
+    width: calc(0.825em + 1.5vw);
     outline: 0;
     border: 0;
     border-bottom: 2px solid;
@@ -67,11 +93,18 @@ body:hover .box{
 .purpose{
     position: relative;
     background-color: rgb(235, 239, 240);
+    height: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
 }
 .purpose::before{
     content: '';
     position: absolute;
-    background: linear-gradient(to right,#fe3c72,#fd5564);
+    background: linear-gradient(to right,var(--electric-pink),var(--pastel-red));
     top: 0;
     left: 0;
     bottom: 0;
@@ -84,13 +117,44 @@ body:hover .box{
 .purpose.selected-purpose::before{
     opacity: 1;
 }
-.purpose-button{
+#Next0,#Next1{
     background: #d3d3d381;
     font-weight: 700;
     color: #424242;
     border: 0;
 }
-
+.preference-wrapper{
+    border-top: 1px solid;
+}
+.preference-wrapper>*{
+    font-size: 0.825em;
+    margin-right: 4px;
+    cursor: pointer;
+    background-color: white;
+    margin-bottom: 8px;
+}
+.preference-wrapper>*::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    z-index: -1;
+    margin: -2px;
+    background-color: #42424242;
+}
+.preference-wrapper>.selected-preference::before{
+    background: linear-gradient(to right,var(--electric-pink),var(--pastel-red));
+}
+.minLimit{
+    background: linear-gradient(30deg,var(--electric-pink),var(--pastel-red)) !important;
+    color: white !important;
+}
+.backIcon>i{
+    font-size: 2.5em;
+}
 
 @media (max-width:330px){
     .allImages{

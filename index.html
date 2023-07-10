@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -13,23 +14,98 @@
 </head>
 <body class="min-vh-100 m-0 p-0 d-flex justify-content-center">
     <main class="border p-3">
-        <div class="birthday-page p-4 d-none">
+        <div class="birthday-page w-100 position-relative me-0">
+            <span id="backIcon0"><button class="bg-white border-0"><i class="fa-solid fa-chevron-left"></i></button></span>
             <h1 class="my-4">Your b-day?</h1>
-            <div class="mt-5 mb-2">
-                <input type="number" tabindex="0" name="" id="" class="birthday-input mx-2" maxlength="1" placeholder="D" numericmode="number">
-                <input type="number" tabindex="0" name="" id="" class="birthday-input mx-2" maxlength="1" placeholder="D" numericmode="number">
+            <div class="mt-4 mb-2">
+                <input type="number" tabindex="0" name="" id="" class="birthday-input mx-1" maxlength="1" placeholder="D" numericmode="number">
+                <input type="number" tabindex="0" name="" id="" class="birthday-input mx-1" maxlength="1" placeholder="D" numericmode="number">
                 /
-                <input type="number" tabindex="0" name="" id="" class="birthday-input mx-2" maxlength="1" placeholder="M" numericmode="number">
-                <input type="number" tabindex="0" name="" id="" class="birthday-input mx-2" maxlength="1" placeholder="M" numericmode="number">
+                <input type="number" tabindex="0" name="" id="" class="birthday-input mx-1" maxlength="1" placeholder="M" numericmode="number">
+                <input type="number" tabindex="0" name="" id="" class="birthday-input mx-1" maxlength="1" placeholder="M" numericmode="number">
                 /
-                <input type="number" tabindex="0" name="" id="" class="birthday-input mx-2" maxlength="1" placeholder="Y" numericmode="number">
-                <input type="number" tabindex="0" name="" id="" class="birthday-input mx-2" maxlength="1" placeholder="Y" numericmode="number">
-                <input type="number" tabindex="0" name="" id="" class="birthday-input mx-2" maxlength="1" placeholder="Y" numericmode="number">
-                <input type="number" tabindex="0" name="" id="" class="birthday-input mx-2" maxlength="1" placeholder="Y" numericmode="number">
+                <input type="number" tabindex="0" name="" id="" class="birthday-input mx-1" maxlength="1" placeholder="Y" numericmode="number">
+                <input type="number" tabindex="0" name="" id="" class="birthday-input mx-1" maxlength="1" placeholder="Y" numericmode="number">
+                <input type="number" tabindex="0" name="" id="" class="birthday-input mx-1" maxlength="1" placeholder="Y" numericmode="number">
+                <input type="number" tabindex="0" name="" id="" class="birthday-input mx-1" maxlength="1" placeholder="Y" numericmode="number">
             </div>
-            <div>Your profile shows your age, not your date of birth.</div>
+            <p>Your profile shows your age, not your date of birth.</p>
+            <button class="position-absolute bottom-0 rounded-pill w-100 p-2 start-0" id="Next0" disabled>Next</button>
         </div>
-        <div class="d-none">
+        <div class="purpose-page position-relative h-100">
+            <span id="backIcon1"><button class="bg-white border-0"><i class="fa-solid fa-chevron-left"></i></button></span>
+            <h1>I'm looking for ...</h1>
+            <p>Increase compatibility by sharing yours!</p>
+            <div>
+                <div class="row mb-2 g-2">
+                    <div class="col-4 text-center">
+                        <div class="rounded-3 py-3 purpose">💘
+                            <p>Long-term Partner</p>
+                        </div>
+                    </div>
+                    <div class="col-4 text-center">
+                        <div class="rounded-3 py-3 purpose">😍
+                            <p>Long-term Partner, but short-term OK</p>
+                        </div>
+                    </div>
+                    <div class="col-4 text-center">
+                        <div class="rounded-3 py-3 purpose">🥂
+                            <p>Short-term, but long-term OK</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-2">
+                    <div class="col-4 text-center">
+                        <div class="rounded-3 py-3 purpose">🎉
+                            <p>Short-term fun</p>
+                        </div>
+                    </div>
+                    <div class="col-4 text-center">
+                        <div class="rounded-3 py-3 purpose">👋
+                            <p>New friends</p>
+                        </div>
+                    </div>
+                    <div class="col-4 text-center">
+                        <div class="rounded-3 py-3 purpose">🤔
+                            <p>Still figuring it out</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="position-absolute bottom-0 rounded-pill w-100 p-2" id="Next1" disabled>Next</button>
+        </div>
+        <div class="preference-page position-relative">
+            <span id="backIcon2"><button class="bg-white border-0"><i class="fa-solid fa-chevron-left"></i></button></span>
+            <h1>What are you into?</h1>
+            <p>You like what you like and you let everyone know</p>
+            <div class="preference-wrapper">
+                <span class="rounded-pill px-2 position-relative d-inline-block">Harry Potter</span>
+                <span class="rounded-pill px-2 position-relative d-inline-block">'90s kid'</span>
+                <span class="rounded-pill px-2 position-relative d-inline-block">Sound Cloud</span>
+                <span class="rounded-pill px-2 position-relative d-inline-block">Spa</span>
+                <span class="rounded-pill px-2 position-relative d-inline-block">Self-care</span>
+                <span class="rounded-pill px-2 position-relative d-inline-block">Heavy metal</span>
+                <span class="rounded-pill px-2 position-relative d-inline-block">House parties</span>
+                <span class="rounded-pill px-2 position-relative d-inline-block">Gin & tonic</span>
+                <span class="rounded-pill px-2 position-relative d-inline-block">Gymnastics</span>
+                <span class="rounded-pill px-2 position-relative d-inline-block">Hot Yoga</span>
+                <span class="rounded-pill px-2 position-relative d-inline-block">Meditation</span>
+                <span class="rounded-pill px-2 position-relative d-inline-block">Harry Potter</span>
+                <span class="rounded-pill px-2 position-relative d-inline-block">'90s kid'</span>
+                <span class="rounded-pill px-2 position-relative d-inline-block">Sound Cloud</span>
+                <span class="rounded-pill px-2 position-relative d-inline-block">Spa</span>
+                <span class="rounded-pill px-2 position-relative d-inline-block">Self-care</span>
+                <span class="rounded-pill px-2 position-relative d-inline-block">Heavy metal</span>
+                <span class="rounded-pill px-2 position-relative d-inline-block">House parties</span>
+                <span class="rounded-pill px-2 position-relative d-inline-block">Gin & tonic</span>
+                <span class="rounded-pill px-2 position-relative d-inline-block">Gymnastics</span>
+                <span class="rounded-pill px-2 position-relative d-inline-block">Hot Yoga</span>
+                <span class="rounded-pill px-2 position-relative d-inline-block">Meditation</span>
+            </div>
+            <button class="w-100 position-absolute bottom-0 rounded-pill p-2" id="Next2" disabled>Next <span id="one">0</span>/5</button>
+        </div>
+        <div class="imageUpload-page position-relative pb-5">
+            <span id="backIcon3"><button class="bg-white border-0"><i class="fa-solid fa-chevron-left"></i></button></span>
             <h1>Add your recent pics</h1>
             <div>Upload 2 photos to start. Add 4 more to make your profile stand out.</div>
             <div class="allImages row justify-content-between w-100 m-0 gy-3">
@@ -75,68 +151,11 @@
                         <input type="file" accept="image/*" name="" id="image-uploader6" class="image-uploader">
                     </div>
                 </div>
-                
+                <button class="position-absolute bottom-0 rounded-pill w-100 p-2 border-0" id="Next3" disabled>Continue</button>
             </div>
         </div>
         <!-- <div class="box position-absolute z-n1"></div> -->
-        <div class="position-relative h-100 d-none">
-            <h1>I'm looking for ...</h1>
-            <p>Increase compatibility by sharing yours!</p>
-            <div>
-                <div class="row mb-2 g-2">
-                    <div class="col-4 text-center">
-                        <div class="rounded-3 py-3 purpose">🎈
-                            <p>Long-term Partner</p>
-                        </div>
-                    </div>
-                    <div class="col-4 text-center">
-                        <div class="rounded-3 py-3 purpose">🎈
-                            <p>Long-term Partner</p>
-                        </div>
-                    </div>
-                    <div class="col-4 text-center">
-                        <div class="rounded-3 py-3 purpose">🎈
-                            <p>Long-term Partner</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row g-2">
-                    <div class="col-4 text-center">
-                        <div class="rounded-3 py-3 purpose">🎈
-                            <p>Long-term Partner</p>
-                        </div>
-                    </div>
-                    <div class="col-4 text-center">
-                        <div class="rounded-3 py-3 purpose">🎈
-                            <p>Long-term Partner</p>
-                        </div>
-                    </div>
-                    <div class="col-4 text-center">
-                        <div class="rounded-3 py-3 purpose">🎈
-                            <p>Long-term Partner</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="purpose-button position-absolute bottom-0 rounded-pill w-100 p-2">Next</button>
-        </div>
-        <div class="">
-            <h1>What are you into?</h1>
-            <p>You like what you like and you let everyone know</p>
-            <div>
-                <span>Harry Potter</span>
-                <span>'90s kid'</span>
-                <span>Sound Cloud</span>
-                <span>Spa</span>
-                <span>Self-care</span>
-                <span>Heavy metal</span>
-                <span>House parties</span>
-                <span>Gin & tonic</span>
-                <span>Gymnastics</span>
-                <span>Hot Yoga</span>
-                <span></span>
-            </div>
-        </div>
+        
     </main>
 
     <script src="index.js"></script>
